@@ -8,8 +8,10 @@ printargument.o: printargument.c
 
 clean:
 ifeq ($(OS),Windows_NT)
+	cls
 	del *.o
 else
+	clear
 	rm *.o
 endif
 

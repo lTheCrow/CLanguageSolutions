@@ -1,10 +1,10 @@
-NAME=hw
+NAME=tc
 
-output: helloworld.o
-	gcc helloworld.o -o $(NAME)
+output: tempconvert.o
+	gcc tempconvert.o -o $(NAME)
 
-helloworld.o: helloworld.c
-	gcc -c helloworld.c
+tempconvert.o: tempconvert.c
+	gcc -c tempconvert.c
 
 clean:
 ifeq ($(OS),Windows_NT)
@@ -21,3 +21,4 @@ ifeq ($(OS),Windows_NT)
 else
 	./$(NAME)
 endif
+	
