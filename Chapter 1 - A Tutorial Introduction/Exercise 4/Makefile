@@ -1,10 +1,10 @@
-NAME=hw
+NAME=tc
 
-output: helloworld.o
-	gcc helloworld.o -o $(NAME)
+output: celtofahr.o
+	gcc celtofahr.o -o $(NAME)
 
-helloworld.o: helloworld.c
-	gcc -c helloworld.c
+celtofahr.o: celtofahr.c
+	gcc -c celtofahr.c
 
 clean:
 ifeq ($(OS),Windows_NT)
@@ -21,7 +21,7 @@ ifeq ($(OS),Windows_NT)
 else
 	clear
 	rm *.exe
-endif
+endif	
 
 run:
 ifeq ($(OS),Windows_NT)
@@ -29,3 +29,4 @@ ifeq ($(OS),Windows_NT)
 else
 	./$(NAME)
 endif
+	

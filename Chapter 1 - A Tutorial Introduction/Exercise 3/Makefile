@@ -15,6 +15,14 @@ else
 	rm *.o
 endif
 
+clean_exe:
+ifeq ($(OS),Windows_NT)
+	del *.exe
+else
+	clear
+	rm *.exe
+endif
+
 run:
 ifeq ($(OS),Windows_NT)
 	$(NAME).exe
